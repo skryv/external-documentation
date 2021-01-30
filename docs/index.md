@@ -1,10 +1,13 @@
+---
+title: How can we help you?
+---
 # How can we help you?
 
 ## Getting Started 
 * What is low-code
-* Intro to the Skryv Platform
-  * From request to happy citizen, company or association
-  * Front-office
+* [Intro to the Skryv Platform](getting_started/skryv_platform_intro/index.md)
+  * [From request to happy citizen, company or association](getting_started/skryv_platform_intro/intro.md)
+  * [Front-office](getting_started/skryv_platform_intro/front-office.md)
   * Back-office
   * Automation
   * Connectivity
@@ -28,7 +31,10 @@
 * [Configuring Dossier Definitions](advanced_config/dosdefs.md)
 * Configuring Workflows
   * BPMN
+  * Tasks types
+  * Bulk Actions
   * DMN
+  * Conventions & best practices
 * Configuring Forms
   * Supported field types
   * Adding logic to a form

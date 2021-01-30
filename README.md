@@ -1,6 +1,13 @@
 # External Documentation
 
 This repository contains the documentation for external use.
+*status 2020-01-30: Proof of Concept to see if we want to go the direction of git/markdown/custom rendering*
+
+## Looking to consult the documentation?
+Simply go to [the documentation start page](docs/index.md) :)
+
+## Looking to edit the documentation?
+
 Writing markdown in git allows us to have a versioned documentation base that can be used in various forms (eg. the view in github, but also the rendering in our website style as well as integration in whitelabeled distributions of our platform)
 
 ## Getting started with MarkDown
@@ -18,12 +25,11 @@ Add the image file to the folder `images`
 In the page you want to use the image, add
 `![Image](`. Once you have the bracket open, VSC will provide you with a drop down to the available files (incl. images). Pick the one you want to show.
 
-
-**TODO** 
-* add a tip to automate screenshot taking
+To easily create consisten browser screenshots, there is a automated service available for Mac. Have a look [here](https://www.loom.com/share/6edfd82f67024191890d99420ea497b2?sharedAppSource=personal_library) how it works and contact [Toon](mailto:toon@skryv.com) for more info.
 
 ### How to add content from Confluence?
 
+There is a plugin active on our confluence that exports the page as markdown. From a page, click the `...` and select `Export to Markdown` in the drop-down menu. Copy the file content in VCS for further editing.
 
 ## The structure of this repository
 
