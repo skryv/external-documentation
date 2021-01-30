@@ -1,7 +1,7 @@
 # External Documentation
 
 This repository contains the documentation for external use.
-Writing markdown in git allows us to have 
+Writing markdown in git allows us to have a versioned documentation base that can be used in various forms (eg. the view in github, but also the rendering in our website style as well as integration in whitelabeled distributions of our platform)
 
 ## Getting started with MarkDown
 Have a look at [this cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to get a grip on markdown.
