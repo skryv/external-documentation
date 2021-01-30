@@ -12,13 +12,17 @@ There are quite a bit shortcuts available (eg. to make selected text bold, to ad
 
 ## A few common questions
 
-### How to add an image
+### How to add an image?
 
-Add the image file to the folder `images` and add `![Image](http://url/a.png)` to reference the image
+Add the image file to the folder `images` 
+In the page you want to use the image, add
+`![Image](`. Once you have the bracket open, VSC will provide you with a drop down to the available files (incl. images). Pick the one you want to show.
+
 
 **TODO** 
-* add the right path structure
 * add a tip to automate screenshot taking
+
+### How to add content from Confluence?
 
 
 ## The structure of this repository
