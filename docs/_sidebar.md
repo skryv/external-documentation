@@ -14,7 +14,7 @@
   * Preview your application
 
 * Dive into the more advanced configuration topics
-  * [Configuring Dossier Definitions](advanced_config/dosdefs.md)
+  * [Configuring Dossier Definitions](/advanced_config/dosdefs.md)
   * Configuring Workflows
   * Configuring Forms
   * Configuring Templates
