@@ -21,25 +21,16 @@ There are quite a bit shortcuts available (eg. to make selected text bold, to ad
 
 ### How to add an image?
 
-Add the image file to the folder `images` 
+Add the image file to the folder `_media_` 
 In the page you want to use the image, add
 `![Image](`. Once you have the bracket open, VSC will provide you with a drop down to the available files (incl. images). Pick the one you want to show.
 
-To easily create consisten browser screenshots, there is a automated service available for Mac. Have a look [here](https://www.loom.com/share/6edfd82f67024191890d99420ea497b2?sharedAppSource=personal_library) how it works and contact [Toon](mailto:toon@skryv.com) for more info.
+To easily create consistent browser screenshots, there is a automated service available for Mac. Have a look [here](https://www.loom.com/share/6edfd82f67024191890d99420ea497b2?sharedAppSource=personal_library) how it works and contact [Toon](mailto:toon@skryv.com) for more info.
 
 ### How to add content from Confluence?
 
 There is a plugin active on our confluence that exports the page as markdown. From a page, click the `...` and select `Export to Markdown` in the drop-down menu. Copy the file content in VCS for further editing.
 
-## The structure of this repository
-
-### Folder structure
-
-
-### More structure elements through front matter
-
-
-
-
-## Previewing your documentation
+## TODO's
+[] limit the width of the page content (now taking the full width, readability not being top)
 
