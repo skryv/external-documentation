@@ -1,0 +1,13 @@
+.sidebar {
+  padding-top: 0 !important;
+}
+
+.sidebar-toggle {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar-toggle {
+    display: block;
+  }
+}
