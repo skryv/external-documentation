@@ -1,3 +1,6 @@
+
+* [Docs Home](/)
+ 
 * Getting started
   * What is low-code?
   * [Intro to the Skryv Platform](/getting_started/skryv_intro.md)
