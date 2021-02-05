@@ -4,6 +4,8 @@ To add a form to your configuration, select `Forms` in the menu left and click t
 
 ![Image](../_media/studio-form-new.png)
 
+Give you form an identifier (key) and name.
+
 This will bring you to the form modeler, which supports an extensive range of content types, validations and other behaviour.
 
 Simply drag the fields and structural elements into the working zone, the blue area will indicate where the item will end up.
@@ -11,6 +13,8 @@ Simply drag the fields and structural elements into the working zone, the blue a
 ![Image](../_media/studio-form-complete.png)
 
 To add more detailed information, click on one of the items to take you to the details.
+
+?> For each of these fields, define at least the key
 
 ![Image](../_media/studio-form-field-details.png)
 

@@ -4,6 +4,8 @@ To create a new dossier type, simply click the + button on the application page 
 
 ![Image](../_media/studio-new-dossier-type.png)
 
+Give your dossier type an identifier (key), name and description.
+
 ![Image](../_media/studio-new-dossier-type-popup.png)
 
-With this done, you can start configuring your workflos & forms!
+With this done, you can start configuring your forms and workflows!
