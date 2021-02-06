@@ -1,6 +1,6 @@
-# Skryv Studio Overview
+# Configuring Forms (and the corresponding information model)
 
-Inside Skryv Studio, you can configure forms that can in turn be used in the workflows. Beside the form visualisation a default PDF visualisation is available as well.
+With the form modeler, you can configure forms that can in turn be used in the workflows. Beside the form visualisation a default PDF visualisation is available as well.
 On top of the visualisations, an API (REST) and export (CSV) can be made available as well. Finally, this configuration will automatically propagate to the search index for easy search & reporting in a later stage.
 
 The form structure can be created by dragging & dropping the relevant fields into the structure.

@@ -1,3 +1,8 @@
+# Configuring Workflows
+
+Workflows are a key concept in the transactional services that can be digitised on the Skryv Platform.
+In the workflows section of Skryv Studio, you can configure the workflow and its corresponding logic.
+The configuration is automatically turned into a working applications, including the user interface, persistence and search index.
 ## BPMN, DMN (and some CMMN)
 
 The workflows are mainly configured in BPMN. Business Decisions are modelled in DMN. CMMN is supported for ad-hoc tasks.
