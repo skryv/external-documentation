@@ -6,20 +6,25 @@ The Manual introduces the key concepts in the Skryv platform, provides several g
 
 ## Getting Started
 
-| Skryv Platform Functionality                                           | Your 1st Application              | Configuration Guides |
-|------------------------------------------------------------------------|-----------------------------------|----------------------|
-| [Front-office](/skryv-platform/skryv_intro.md#front-office)           | [Before you start](/config-basics/before-you-start.md)              | Coming soon                     |
-| [Back-office](/skryv-platform/skryv_intro.md#back-office)             | [Initialising the Dossier Type](/config-basics/1st-dossier-type.md) |                      |
-| [Process Automation](/skryv-platform/skryv_intro.md#automation)       | [Adding a form](/config-basics/1st-form.md)                 |                      |
-| [Connector Factory](/skryv-platform/skryv_intro.md#connector-factory) | [Adding a workflow](/config-basics/1st-workflow.md)             |                      |
-| [Reporting](/skryv-platform/skryv_intro.md#reporting)                 | Preview your application      |                      |
-| [VO-Kit](/skryv-platform/skryv_intro.md#vo-kit)                       | [Publish your application](/config-basics/1st-publication.md)      |                      |
+| Skryv Platform Functionality                                           | Your 1st Application                                                                                       | Configuration Guides |
+|------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|----------------------|
+| [Front-office](/getting-started/skryv-intro.md#front-office)           | [Before you start](/getting-started/before-you-start.md)                                                   | Coming soon          |
+| [Back-office](/getting-started/skryv-intro.md#back-office)             | [Initialising the Dossier Type](/getting-started/your-1st-application.md#setting-up-your-1st-dossier-type) |                      |
+| [Process Automation](/getting-started/skryv-intro.md#automation)       | [Adding a form](/getting-started/your-1st-application.md#setting-up-your-1st-form)                                                              |                      |
+| [Connector Factory](/getting-started/skryv-intro.md#connector-factory) | [Adding a workflow](/getting-started/your-1st-application.md#setting-up-your-1st-workflow)                                                      |                      |
+| [Reporting](/getting-started/skryv-intro.md#reporting)                 | [Preview your application](/getting-started/your-1st-application.md#preview-your-1st-application)                                                                                   |                      |
+| [VO-Kit](/getting-started/skryv-intro.md#vo-kit)                       | [Publish your application](/getting-started/your-1st-application.md#publish-your-1st-version)                                            |                      |
 
 ## Reference Documentation
 
-| Dossier Types | Workflows | Forms |
-|---------------|-----------|-------|
-|               |           |       |
+| Configuration                                       | Customisation | Technology  |
+|-----------------------------------------------------|---------------|-------------|
+| [Dossier Definitions](/config-reference/dosdefs.md) | Coming Soon   | Coming Soon |
+| [Workflows](/config-reference/workflows.md)         |               |             |
+| [Forms](/config-reference/forms.md)                 |               |             |
+| [Templates](/config-reference/templates.md)         |               |             |
+
+
 
 ## In need of more help?
 

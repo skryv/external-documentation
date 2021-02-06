@@ -59,7 +59,7 @@ With this done (and the save button clicked), you have a workflow with a task th
 
 
 
-## Publishing your 1st version
+## Publish your 1st version
 
 Once you are happy with the changes you made, you can submit the changes.
 
