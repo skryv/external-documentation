@@ -114,31 +114,35 @@ These
 
 #### Asynchronous Continuations
 
+Asynchronous continuations can be used to optimise the UI response for the user.
 
+Let's consider the example of a process with two user tasks and 20 automated tasks between these two user tasks.
+
+By default, there are no asynchronous continuations, which means that the process engine will execute all the automated steps between the two user tasks in one go (one transaction). In this example, when a user submits the first task, this might lead to a long wait for the user to receive feedback from the application, because all automated steps need to be executed for the user to receive the feedback that the second user task is available.
+
+To avoid this long wait for feedback, it is possible to check the box "Asynchronous After", e.g. on the first user task. This will result in immediate feedback to the user when the first task is submitted, and the automated tasks following the user task will then be executed in the background.
+
+If it is however important for the user to see the second user task after submitting the first, there are two options:
+- Do not use async checkboxes at your own risk. A long wait for the user without feedback will most likely result in a negative user experience.
+- Use an async checkbox and add a customised spinner to show to the user that the application is processing, and add an automated refresh to display the second user task once it is available.
 
 
 ## Decision Task
 
 Decision tables (following the DMN standard) can be integrated into BPMN workflows to apply business rules.
 
-### Instructions for configuration
-
-1. Create a DMN through the Decision Tables Modeler
-2. Create a Business Rules Task in the BPMN workflos
-3. Link BPMN task to DMN
-   1. With the Business Rules task selected, go to the `General` tab of the information pane
-   2. Under implementation, select DMN & enter the Id of your DMN file.
-   3. List the input variable for the decision: in the Input/Output tab of the task, under Input Parameters, enter the input variable(s) to be used in the decision table. Define the values of each variable according to where this data is extracted from (i.e. field from docdef, BPMN variable…). Pay attention that all information is available before executing the decision.
-   4. Add rules to the DMN: Fill in the Input and Outputs variables for the decision in the Decision Table tab, making sure to specify the correct format of each variable
-   5. Add DMN output to the BPMN task: In the General tab, under Result Variable, enter the name of the DMN output variable. 
+Simply add a Business Rule Task in the BPMN workflow and follow these steps:
+1. Link the DMN: With the Business Rule Task selected, go to the `General` tab of the information pane. In the section `Details`, select DMN as Implementation and fill out the Id of your DMN file in the Decision Ref field.
+1. [OPT] Set the input variables: If all input variables to execute the DMN are already available on the process, this step can be skipped. If variables still need to be set, these can be added using Execution Listeners on start in the `Listeners` tab of the Business Rule Task.
+1. Map the DMN output: In the General tab, under Result Variable, enter the name of the DMN output variable. The DMN output is now available and can be used further in the process.
 
 
-## Service Tasks
+## Service Task
 
 Service tasks allow to delegate specific functionality to pieces of code. 
 The Skryv platform comes with a set of such predefined functionality (e.g. send a mail, send an update to Dosis, collect information from Magda, ...)
 
-Through customisation of the app, new functionality can be added as well. please contact [one of our consultants](mailto:support@skryv.com) to give you an introduction. 
+Through customisation of the app, new functionality can be added as well. Please contact [one of our consultants](mailto:support@skryv.com) to give you an introduction. 
 
 
 
