@@ -17,12 +17,13 @@ The Manual introduces the key concepts in the Skryv platform, provides several g
 
 ## Reference Documentation
 
-| Configuration                                       | Customisation | Technology  |
-|-----------------------------------------------------|---------------|-------------|
-| [Dossier Definitions](/config-reference/dosdefs.md) | Coming Soon   | Coming Soon |
-| [Workflows](/config-reference/workflows.md)         |               |             |
-| [Forms](/config-reference/forms.md)                 |               |             |
-| [Templates](/config-reference/templates.md)         |               |             |
+| Configuration                                         | Customisation | Technology  |
+|-------------------------------------------------------|---------------|-------------|
+| [Configuration Artefacts](/config-reference/index.md) | Coming Soon   | Coming Soon |
+| [Dossier Definitions](/config-reference/dosdefs.md)   |               |             |
+| [Workflows](/config-reference/workflows.md)           |               |             |
+| [Forms](/config-reference/forms.md)                   |               |             |
+| [Templates](/config-reference/templates.md)           |               |             |
 
 
 
