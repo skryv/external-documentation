@@ -3,11 +3,11 @@
  
 * Getting started
   * [Intro to the Skryv Platform](/getting-started/skryv-intro.md)
-  * [Before You Start](/getting-started/before-you-start.md)
   * [Learn the Configuration Basics](/getting-started/your-1st-application.md)
 
 * Configuration 
   * [Configuration Guides](/config/guides.md)
+  * [Configuration Samples](/config/samples.md)
   * [Configuration FAQ](/config/faq.md)
 
 * Config Reference Documentation
