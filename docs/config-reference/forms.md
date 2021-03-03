@@ -28,7 +28,7 @@ Behind the scences, this is translated into a json file that describes the infor
 | date             | \-                                                                                                                                                                                                                     | `onlyWhen`, `conditions` , `read-only`, `required` ,`default`, `computedDefault`, `help`, `helpInLine`                                |
 | information      | When you want to give extra information to the user without expecting an answer in return                                                                                                                              | `onlyWhen`, `help`, `helpInLine`                                                                                                      |
 | list             | A list to which users can dynamically add/remove a set of fields.                                                                                                                                                      | `onlyWhen`, `conditions` , `read-only`, `required` ,`visualisation`, `initialLength`, `labelForAdd`, `labelForDelete`                 |
-| ,attachment2     | When you expect the user to upload an attachment.<br><br>The allowed formats are defined in the `application.properties` file of the applications. For example: `skryv.attachments.allowed-mime-types=application/pdf` | `onlyWhen` , `required`                                                                                                               |
+| attachment2     | When you expect the user to upload an attachment.<br><br>The allowed formats are defined in the `application.properties` file of the applications. For example: `skryv.attachments.allowed-mime-types=application/pdf` | `onlyWhen` , `required`                                                                                                               |
 | choice           | \-                                                                                                                                                                                                                     | `onlyWhen` , `read-only`, `required` ,`default`, `computedDefault`, `help`, `helpInLine` , `computedWith`, `displayOptions`           |
 | multichoice      | \-                                                                                                                                                                                                                     | `onlyWhen` , `read-only`, `required` ,`default`, `computedDefault`, `help`, `helpInLine` , `computedWith`, `displayOptions`           |
 | option           | An option for a `choice` or `multichoice` field                                                                                                                                                                        | `onlyWhen`                                                                                                                            |
@@ -93,5 +93,72 @@ Some of the computedExpressions we often use
 | To check the iban number                              | `“typeof $.path_to_iban_field === 'string' && $.path_to_iban_field.length > 0? ($.path_to_iban_field.substring(0,2) === 'BE' ? ((($.path_to_iban_field.substring(4,16) + '1114') % 97 + $.path_to_iban_field.substring(2,4)) % 97 === 1) : ((($.path_to_iban_field.substring(2,14) + '1114') % 97 + $.path_to_iban_field.substring(0,2)) % 97 === 1)):true”` |
 | Based on the option one selected in a choice field    | `"$.path_to_choice_field !== undefined? $.path_to_choice_field.selectedOption === 'selected_value': false"`                                                                                                                                                                                                                                                  |
 | Calculate with dates                                  | Use `moment()`                                                                                                                                                                                                                                                                                                                                               |
+
+Computed expressions on a list:
+
+| **What**                                              | **Computed expression**                                                                                                                                                                                                                                                                                                                                      |
+|-------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| listItemTitle | ```"element": {"computedExpressions": { "listItemTitle": "$.field1.selectedOption === undefined ? 'Field1' : $.field1.selectedOption + ' ' + ($.field2 \| '')"}}``` |
+| onlyWhen | ```"element": {"computedExpressions": { "fieldSelectedOption": "$.field.selectedOption === 'option1'"}}``` |
+
+## Address custom component
+
+An address fieldset can use the custom behaviour of the custom component `skrAddressInput` if it contains the following fields:
+
+*   Street
+    
+*   House number
+    
+*   Box number
+    
+*   Zip code
+    
+*   \[OPT\] NIS code
+    
+*   Municipality
+    
+*   \[OPT\] Country
+    
+
+![image](../_media/studio-form-skrAddresInput.png)
+
+Example:
+
+```
+{
+  "type": "fieldset",
+  "label": "Address",
+  "name": "address",
+  "customComponentName": "skrAddressInput",
+  "autocomplete": true,
+  "fields": [
+    {
+      "type": "text",
+      "label": "Street",
+      "name": "street"
+    },
+    {
+      "type": "text",
+      "label": "Housenumber",
+      "name": "housenumber"
+    },
+    {
+      "type": "text",
+      "label": "Boxnumber",
+      "name": "boxnumber"
+    },
+    {
+      "type": "text",
+      "label": "Zipcode",
+      "name": "zipcode"
+    },
+    {
+      "type": "text",
+      "label": "Municipality",
+      "name": "municipality"
+    }
+  ]
+}
+```
 
 For more information about these advanced configurations, please contact [one of our consultants](mailto:support@skryv.com) to give you an introduction.
