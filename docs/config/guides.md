@@ -1,5 +1,3 @@
-Core Modules : Skryv Studio way of working/how to get started  
-
 # Configuration guides
 
 ## Where to start with configuration
@@ -28,7 +26,7 @@ Before getting started with configuration, you need to have some basic insight a
 *   *The process starts when a citizen requests a subsidy via the front-office*
 *   *The process ends when the subsidy has been paid to the citizen*
 *   *The minimal happy path is that the citizen submits a request, a casemanager approves the request, and a payment is made*
-    
+
 ### 2. Create your dossier type
 
 Now that you have gathered all the information, it’s time to get started in Skryv Studio!

@@ -40,7 +40,7 @@ Process automation allows you to saves time on repetitive tasks and provides a f
 ## Back-office
 The Back-office lets your teams work efficiently with the right info at the right time
 
-*From partial automation to fully automated rights assignment. Many of the transactional government services will benefit from process automation. *
+*From partial automation to fully automated rights assignment. Many of the transactional government services will benefit from process automation.*
 
 * Support place & time independent working with an intuitive web interface
 * Guide your team by providing relevant context & easy to complete tasks
