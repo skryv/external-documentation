@@ -7,6 +7,7 @@
 
 * Configuration 
   * [Configuration Guides](/config/guides.md)
+  * [Configuration Tutorials](/config/tutorials.md)
   * [Configuration Samples](/config/samples.md)
   * [Configuration FAQ](/config/faq.md)
 
