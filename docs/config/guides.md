@@ -83,7 +83,8 @@ All the information you have gathered in preparation will be useful as a guideli
 *   *Add a X-OR gateway in case the casemanager refuses the subsidy request*
 *   *Make some fields conditional in the request form (only shown when subsidy Type B), automatically calculate the value of the subsidy, refine e-mail templates…*
 *   *Add e-mail notifications to the citizen in case of refusal*
-    
+
+![Image](../_media/guide-workflow-iteration.png)
 
 ### 5. Validate your configuration
 

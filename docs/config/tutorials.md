@@ -3,7 +3,7 @@
 These video tutorials give step-by-step instructions on how to do some common basic configurations to build your process.
 
 
-## I want to create a subsidy request form for the citizen
+## I want to create a request form for the citizen
 
 In this tutorial, we will build a basic process so a citizen can submit a request form for a subsidy via the front-office.
 
@@ -56,7 +56,7 @@ In the example of a subsidy process, the back-office task depends on the type of
 3. Set an expression on the branch for Task B so it is only taken when the selected subsidy type in the request form is B. This is a custom fluent expression that retrieves information from forms. 
 4. The back-office casemanager sees Task B only when subsidy type B is chosen. In all other cases, they see Task A.
 
-For more information on how fluent expressions can be used to manipulate data from forms, see the workflow reference documentation.
+For more information on how fluent expressions can be used to manipulate data from forms, see the [workflow reference documentation](/config-reference/workflows.md##fluent-api).
 
 <iframe width="560" height="490" src="https://www.youtube.com/embed/-Vumx4Eer2E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -64,7 +64,7 @@ For more information on how fluent expressions can be used to manipulate data fr
 
 #### I want to add a milestone
 
-1. Add a signal event
+1. In your workflow, add a signal event
 2. Name the event and fill in the signal name using the prefix `DS_`
 3. The milestone is now automatically displayed in the history tab in the back-office
 
@@ -73,3 +73,56 @@ Milestones are also useful in other places:
 - They can be used in templates
 
 <iframe width="560" height="490" src="https://www.youtube.com/embed/mc_0aAWNaUs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## I want to configure task execution
+
+### I want to assign a task to users with a specific role
+
+!>Note: Configuration of users and user roles is not yet available via Skryv Studio. We currently provide a few default users (i.e. `anna`, `jimmy`) and user roles (i.e. `Requester`, `Casemanager`).
+
+This tutorial shows how to assign a task to a back-office user with the role `Casemanager` to process a subsidy request. This means that this task will not be available to other users who do not have that role (e.g. citizen requesters).
+
+1. First make sure that the user Jimmy is given the relevant role to execute the task via the admin page of the back-office.
+2. In the workflow, set the candidate group of the back-office task to `casemanager`
+3. This task will now be automatically assigned to Jimmy
+
+(Video tutorial upcoming)
+
+
+### I want to set a due date on a task
+
+Due dates are useful to make sure that back-office tasks are executed in the correct timeframe. Tasks are automatically sorted according to due date in the Skryv Platform back-office.
+
+1. In your workflow, add a due date to your back-office task. Here we are setting it to a period of 10 days after the task is active 
+2. The final due date is now automatically show on the back-office task list for the casemanager
+
+(Video tutorial upcoming)
+
+
+## I want use communication templates
+
+The following tutorials explain how communication templates can be used to send various types of messages (letters or e-mails) to citizens or various stakeholders.
+
+### I want to generate a letter based on a template
+
+In this example, we want to generate a letter for the citizen that we want to print manually and send via post.
+
+1. Create a new communication template
+2. Write the body of the letter and copy the placeholders for the relevant form fields you want to use
+3. In your workflow, add a user task with the Communication template and link to the letter template you just made
+4. This letter is now automatically filled with the contents of the request form
+
+Tip: You can edit the template and refresh the communication task to preview the changes without having to start a new dossier.
+
+(Video tutorial upcoming)
+
+### I want to send automatic e-mail notifications
+
+This tutorial shows how to send an automatic e-mail notification to the citizen after they have submitted a request form.
+
+1. In the request form, add a field for the citizen to fill in their e-mail
+2. Create a new communication template for the e-mail
+3. Write the body of the e-mail and copy placeholders for the relevant form fields you want to use
+4. In your workflow, add a service task with the Mail Task template and fill the parameters so that the e-mail is sent to the e-mail address the citizen gave in the request form (see [I want to use a value from a form in the BPMN process](##i-want-to-use-a-value-from-a-form-in-the-BPMN-process) and [Accessing a document](/config-reference/workflows.md###accessing-a-document) )
+
+(Video tutorial upcoming)
