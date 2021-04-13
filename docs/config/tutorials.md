@@ -76,7 +76,7 @@ Milestones are also useful in other places:
 
 ## I want to configure task execution
 
-### I want to assign a task to users with a specific role
+#### I want to assign a task to users with a specific role
 
 !>Note: Configuration of users and user roles is not yet available via Skryv Studio. We currently provide a few default users (i.e. `anna`, `jimmy`) and user roles (i.e. `Requester`, `Casemanager`).
 
@@ -89,7 +89,7 @@ This tutorial shows how to assign a task to a back-office user with the role `Ca
 (Video tutorial upcoming)
 
 
-### I want to set a due date on a task
+#### I want to set a due date on a task
 
 Due dates are useful to make sure that back-office tasks are executed in the correct timeframe. Tasks are automatically sorted according to due date in the Skryv Platform back-office.
 
@@ -103,7 +103,7 @@ Due dates are useful to make sure that back-office tasks are executed in the cor
 
 The following tutorials explain how communication templates can be used to send various types of messages (letters or e-mails) to citizens or various stakeholders.
 
-### I want to generate a letter based on a template
+#### I want to generate a letter based on a template
 
 In this example, we want to generate a letter for the citizen that we want to print manually and send via post.
 
@@ -116,7 +116,7 @@ Tip: You can edit the template and refresh the communication task to preview the
 
 (Video tutorial upcoming)
 
-### I want to send automatic e-mail notifications
+#### I want to send automatic e-mail notifications
 
 This tutorial shows how to send an automatic e-mail notification to the citizen after they have submitted a request form.
 
