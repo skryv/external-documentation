@@ -112,6 +112,8 @@ Automated assignment is a key feature for user tasks. Assignment can be configur
 - Candidate users: This is a list of possible assignees.
 - Candidate groups: This is a group of assignees, which corresponds with the concept of a user role, e.g. 'casemanager' or 'validator'. Adding a candidate group ensure the task will get assigned to a user within the candidate group, i.e. with that specific role.
 
+The image below shows a user task 'Controleer aanvraag', containing a candidate group 'dossierbehandelaar'. This ensure that only users with the role 'dossierbehandelaar' can get assigned to instances of the task 'Controleer aanvraag'. 
+
 ![Image](../_media/studio-workflow-usertask-assignment.png)
 
 #### Due date
