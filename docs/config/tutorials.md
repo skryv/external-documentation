@@ -96,7 +96,7 @@ Due dates are useful to make sure that back-office tasks are executed in the cor
 1. In your workflow, add a due date to your back-office task. Here we are setting it to a period of 10 days after the task is active 
 2. The final due date is now automatically show on the back-office task list for the casemanager
 
-(Video tutorial upcoming)
+<iframe width="560" height="490" src="https://www.youtube.com/embed/T_fg89ww9fw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## I want use communication templates
