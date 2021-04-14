@@ -14,7 +14,7 @@ In this tutorial, we will build a basic process so a citizen can submit a reques
 5. Open the front-office preview and verify that everything is correct
 
 
-<iframe width="560" height="490" src="https://www.youtube.com/embed/RskdZx1Mo10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="784" height="490" src="https://www.youtube.com/embed/RskdZx1Mo10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## I want to add automatic validations/rules to my form
 
@@ -29,7 +29,7 @@ In this example, a citizen is only required to attach an invoice in case the amo
 3. Select the attachment field and select the expression from the dropdown
 4. This field will now only be shown if an amount greater than 1000 is entered
 
-<iframe width="560" height="490" src="https://www.youtube.com/embed/ji8oCzBPOYc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="784" height="490" src="https://www.youtube.com/embed/ji8oCzBPOYc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 #### I want to set a field based on other fields
@@ -42,7 +42,7 @@ In this example, a subsidy is paid in two instances and we want to automatically
 4. Select the Second payment field, set it to read-only,  and select the second payment calculation from the dropdown
 5. These two fields will now automatically show the 60% and 40% payments of the amount filled in by the citizen
 
-<iframe width="560" height="490" src="https://www.youtube.com/embed/F02ad0Fzwnc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="784" height="490" src="https://www.youtube.com/embed/F02ad0Fzwnc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## I want to use a value from a form in the BPMN process
 
@@ -58,7 +58,7 @@ In the example of a subsidy process, the back-office task depends on the type of
 
 For more information on how fluent expressions can be used to manipulate data from forms, see the [workflow reference documentation](/config-reference/workflows.md##fluent-api).
 
-<iframe width="560" height="490" src="https://www.youtube.com/embed/-Vumx4Eer2E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="784" height="490" src="https://www.youtube.com/embed/-Vumx4Eer2E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## I want to follow my dossier status
 
@@ -72,7 +72,7 @@ Milestones are also useful in other places:
 - They can be used in the dossier type properties to define the progress bar in the front-office
 - They can be used in templates
 
-<iframe width="560" height="490" src="https://www.youtube.com/embed/mc_0aAWNaUs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="784" height="490" src="https://www.youtube.com/embed/mc_0aAWNaUs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## I want to configure task execution
 
@@ -86,7 +86,7 @@ This tutorial shows how to assign a task to a back-office user with the role `Ca
 2. In the workflow, set the candidate group of the back-office task to `casemanager`
 3. This task will now be automatically assigned to Jimmy
 
-(Video tutorial upcoming)
+<iframe width="784" height="490" src="https://www.youtube.com/embed/XSOB1YlvZGo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 #### I want to set a due date on a task
@@ -94,9 +94,9 @@ This tutorial shows how to assign a task to a back-office user with the role `Ca
 Due dates are useful to make sure that back-office tasks are executed in the correct timeframe. Tasks are automatically sorted according to due date in the Skryv Platform back-office.
 
 1. In your workflow, add a due date to your back-office task. Here we are setting it to a period of 10 days after the task is active 
-2. The final due date is now automatically show on the back-office task list for the casemanager
+2. The final due date is now automatically shown on the back-office task list for the casemanager
 
-<iframe width="560" height="490" src="https://www.youtube.com/embed/T_fg89ww9fw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="784" height="490" src="https://www.youtube.com/embed/T_fg89ww9fw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## I want use communication templates
@@ -114,7 +114,8 @@ In this example, we want to generate a letter for the citizen that we want to pr
 
 Tip: You can edit the template and refresh the communication task to preview the changes without having to start a new dossier.
 
-(Video tutorial upcoming)
+<iframe width="784" height="490" src="https://www.youtube.com/embed/9hiPCpoQ5fc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 #### I want to send automatic e-mail notifications
 
@@ -125,4 +126,4 @@ This tutorial shows how to send an automatic e-mail notification to the citizen 
 3. Write the body of the e-mail and copy placeholders for the relevant form fields you want to use
 4. In your workflow, add a service task with the Mail Task template and fill the parameters so that the e-mail is sent to the e-mail address the citizen gave in the request form (see [I want to use a value from a form in the BPMN process](##i-want-to-use-a-value-from-a-form-in-the-BPMN-process) and [Accessing a document](/config-reference/workflows.md###accessing-a-document) )
 
-(Video tutorial upcoming)
+<iframe width="784" height="490" src="https://www.youtube.com/embed/lrYgUrOGT2U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
