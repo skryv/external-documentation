@@ -3,7 +3,7 @@
 Workflows are a key concept in the transactional services that can be digitised on the Skryv Platform.
 In the workflows section of Skryv Studio, you can configure the workflow and its corresponding logic.
 The configuration is automatically turned into a working applications, including the user interface, persistence and search index.
-## BPMN, DMN (and some CMMN)
+## BPMN and DMN (and some CMMN)
 
 The workflows are mainly configured in BPMN. Business Decisions are modelled in DMN. CMMN is supported for ad-hoc tasks.
 
@@ -12,19 +12,19 @@ The workflows are mainly configured in BPMN. Business Decisions are modelled in 
 For more information about the BPMN elements supported, please consult the [BPMN 2.0 Implementation Reference](https://docs.camunda.org/manual/7.14/reference/bpmn20/).
 For more information about DMN and the supported features, please consult the [DMN 1.3 Implementation Reference](https://docs.camunda.org/manual/7.14/reference/dmn/).
 For more information about the CMMN elements supported, please consult the [CMMN 1.1 Implementation Reference](https://docs.camunda.org/manual/7.14/reference/cmmn11/).
-## Configuring Tasks
+## Configuring tasks
 
 BPMN support a number of tasks, such as user tasks and service tasks. 
 
 To add a task to the workflow, execute the following steps in the workflow editor:
 
-1. drag the task icon to the workspace and release it on the place you
+1. Drag the task icon to the workspace and release it on the place you
 2. Click the task
 3. Click the wrench
 4. Select task type (eg. user task)
 
 When the task is selected, the right information pane will give you access to the available configuration parameters of the task
-## User Task
+## User task
 
 User Tasks are tasks executed by users through the user interface.
 The Skryv platform has out of the box support for various subtypes of user tasks.
@@ -38,12 +38,12 @@ The Skryv platform has out of the box support for various subtypes of user tasks
 | Bulk action tasks Select   |              | supported   |
 | Bulk action tasks Download |              | supported   |
 
-### Yes/No Task
+### Yes/No task
 
 A Yes-No task is very simple type of task that allows the user to check off an action.
 Simply Create a process or a case and add a user task to the latter. Use Workflow modeler to edit the workflow.
 
-### Form Task
+### Form task
 
 A form task allows the user to enter and view  information inside a structured page. 
 
@@ -89,30 +89,35 @@ A communication tasks allows the user to create a communication that will later 
 5. Choose wether the communication should be shown in read-only modus (eg. for printing)
 6. Choose a custom Submit Button Label to shown on the button that completes the task.
 
-### More complex task types
-
-Besides the tasks described above, we also support Form Task with Context, Form Task with Context and Subdocs and Bulk Tasks.
-For these more advanced configurations, please contact [one of our consultants](mailto:support@skryv.com) to give you an introduction.
-
 ### Ad-hoc tasks
 
-CMMN support allows you to add ad-hoc tasks that depend on the 
+CMMN support allows you to add ad-hoc tasks, also referred to as actions, that depend on the 
 For more information about the CMMN tasks, please contact [one of our consultants](mailto:support@skryv.com) to give you an introduction.
+
+### Advanced task types
+
+Besides the task types described above, we also support the following advanced task types:
+- Form tasks with context: When executing a task in the back-office, it is often relevant for the dossier manager to have specific context to execute the task. Form tasks with context allow to cater for this need, by displaying the relevant context on the left side of the screen, and the form on the right side of the screen.
+- Form tasks with a list of sub-forms: This task type covers back-office tasks, which require the dossier manager to treat a list of items. This task type is especially useful in case the items in the list contain a lot of detail and each item requires a dedicated treatment from the dossier manager.
+- Bulk tasks: This feature allows to execute tasks in bulk, e.g. approve decisions in bulk or print communication in bulk.
+
+For these more advanced configurations, please contact [one of our consultants](mailto:support@skryv.com) to give you an introduction.
+
 ### Other configuration options for user tasks
 
-#### Assignee
+#### Assignment
 
+Automated assignment is a key feature for user tasks. Assignment can be configured in three ways:
+- Assignee: A specific user can be set in the 'Assignee' field of a user task, making sure that this one, specific user will always be assigned to instances of this user task. This feature is typically only used to make sure that follow-up tasks are always assigned to a user that has previously executed specific tasks on the dossier.
+- Candidate users: This is a list of possible assignees.
+- Candidate groups: This is a group of assignees, which corresponds with the concept of a user role, e.g. 'casemanager' or 'validator'. Adding a candidate group ensure the task will get assigned to a user within the candidate group, i.e. with that specific role.
 
-#### Candidate Users and Candidate Groups
-Assign the task to a specific person or a group, identified by their id
+![Image](../_media/studio-workflow-usertask-assignment.png)
 
-?> Try to avoid using personal assignment, rather work with a group and add the relevant people to the group through the admin pages of the application.
-
-#### Due Date & Follow-up Data
+#### Due date
 When a task is due or requires follow-up, this is used in the task list and task visualisation.
-These
 
-#### Asynchronous Continuations
+#### Asynchronous continuations
 
 Asynchronous continuations can be used to optimise the UI response for the user.
 
@@ -127,7 +132,7 @@ If it is however important for the user to see the second user task after submit
 - Use an async checkbox and add a customised spinner to show to the user that the application is processing, and add an automated refresh to display the second user task once it is available.
 
 
-## Decision Task
+## Decision task
 
 Decision tables (following the DMN standard) can be integrated into BPMN workflows to apply business rules.
 
@@ -137,7 +142,7 @@ Simply add a Business Rule Task in the BPMN workflow and follow these steps:
 1. Map the DMN output: In the General tab, under Result Variable, enter the name of the DMN output variable. The DMN output is now available and can be used further in the process.
 
 
-## Service Task
+## Service task
 
 Service tasks allow to delegate specific functionality to pieces of code. 
 The Skryv platform comes with a set of such predefined functionality (e.g. send a mail, send an update to Dosis, collect information from Magda, ...)
