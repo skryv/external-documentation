@@ -27,20 +27,19 @@ When the task is selected, the right information pane will give you access to th
 ## User task
 
 User Tasks are tasks executed by users through the user interface.
-The Skryv platform has out of the box support for various subtypes of user tasks.
+The Skryv platform has out of the box support for various types of user tasks.
 
-| Task type                  | Front-Office | Back-Office | 
+| Task type                  | Front-office | Back-office | 
 |----------------------------|--------------|-------------|
-| Pop-up task (yes/no)       | coming       | supported   |
+| Yes/No task                | planned      | supported   |
 | Form task                  | supported    | supported   |
-| Communication task         |              | supported   |
-| Form with context task     |              | supported   |
-| Bulk action tasks Select   |              | supported   |
-| Bulk action tasks Download |              | supported   |
+| Communication task         | supported    | supported   |
+| Ad-hoc tasks               | supported    | supported   |
+| Advanced task types        | n/a          | supported   |
 
 ### Yes/No task
 
-A Yes-No task is very simple type of task that allows the user to check off an action.
+A Yes/No task is very simple type of task that allows the user to check off an action.
 Simply Create a process or a case and add a user task to the latter. Use Workflow modeler to edit the workflow.
 
 ### Form task
@@ -117,7 +116,10 @@ The image below shows a user task 'Controleer aanvraag', containing a candidate 
 ![Image](../_media/studio-workflow-usertask-assignment.png)
 
 #### Due date
-When a task is due or requires follow-up, this is used in the task list and task visualisation.
+
+The image above shows that a due date can be set as well. The due date gives a deadline to the assigned user for the execution of the task. The due date can be set to an exact date, a duration (e.g. `P14D` for 14 days, as in the example above) or a relative date (e.g. request date + 14 days).
+
+The due date is available in the dashboard and search pages, allowing the user to sort tasks by due date, ensuring the most urgent tasks are tackled first.
 
 #### Asynchronous continuations
 
