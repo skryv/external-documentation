@@ -252,7 +252,7 @@ Self-explanatory alternatives to retrieve a document are:
 
 Accessing process scoped documents can be done as follows:
 
-`${skryv.execution(execution)..getOrCreateDocumentByDefinitionKey(definitionKey)}`
+`${skryv.execution(execution).getOrCreateDocumentByDefinitionKey(definitionKey)}`
 
 ### Operations on a document
 
