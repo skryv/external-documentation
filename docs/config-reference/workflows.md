@@ -181,10 +181,23 @@ The Fluent API is typically used in Camunda listeners or service tasks, to retri
 
 The base principle of the Fluent API is that you can chain one operation after the other, passing the output of the operation on the left to the next one. 
 
-A simple example to explain this principle is `${skryv.dossierFromScope(execution).getLabel()}`. This executes the following logic:
-* creates the context of Skryv
-* fetches the dossier
-* returns the label
+A simple example to explain this principle is `${skryv.dossierFromScope(execution).getLabel()}`, fetching the dossier label. This executes the following logic:
+* `${...}` indicates this is an expression
+* `skryv` creates the context of Skryv
+* `.dossierFromScope(execution)` fetches the dossier
+* `.getLabel()` returns the label
+
+Another example is fetching the value from a field in a form: `${skryv.dossierFromScope(execution).getDocumentByDefinitionKey(‘formKey’).getField(‘pathToField’)}`
+
+* `${...}` indicates this is an expression
+* `skryv` creates the context of Skryv
+* `.dossierFromScope(execution)` fetches the dossier
+* `.getDocumentByDefinitionKey(‘formKey’)` fetches the form defined by `formKey` een specifiek formulier raadplegen
+* `.getField(‘pathToField’)` fetches the value of the field with that path 
+
+
+Finally, it is also possible to return true/false using comparisons, e.g. to decide which path in a gateway is to be followed. In the following case the expression will return `true` if the field value is larger than 10.
+`${skryv.dossierFromScope(execution).getDocumentByDefinitionKey(‘formKey’).getField(‘pathToField’) > 10}`
 
 The following sections contain the reference documentation for the Fluent API.
 
