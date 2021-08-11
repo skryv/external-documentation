@@ -31,7 +31,18 @@ Before getting started with configuration, you need to have some basic insight a
 
 Now that you have gathered all the information, it’s time to get started in Skryv Studio!
 
-Start by creating a new dossier type for your process (check-out the tutorial here).
+Start by creating a new dossier type for your process.
+
+![Image](../_media/studio-dossier-new.png)
+
+Clicking the gear icon next to the name you chose, takes you to the dossier settings.
+
+![Image](../_media/studio-dossier-settings.png)
+
+More information about the dossier settings can be found in the [configuration reference documentation](/config-reference/dosdefs.md)
+
+
+Within the dossier type, you can now start adding other configuration artefacts.
 
 ### 3. Create a first iteration of your process
 
