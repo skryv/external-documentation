@@ -4,27 +4,20 @@ Welcome to the Skryv Platform Manual! The Skryv platform is a low-code platform 
 
 The Manual introduces the key concepts in the Skryv platform, provides several guides as well as a comprehensive reference section.
 
-## Getting Started
 
-| Skryv Platform Functionality                                           | Your 1st Application                                                                                       | Configuration Guides |
-|------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|----------------------|
-| [Front-office](/getting-started/skryv-intro.md#front-office)           | [Before you start](/getting-started/before-you-start.md)                                                   | Coming soon          |
-| [Back-office](/getting-started/skryv-intro.md#back-office)             | [Initialising the Dossier Type](/getting-started/your-1st-application.md#setting-up-your-1st-dossier-type) |                      |
-| [Process Automation](/getting-started/skryv-intro.md#automation)       | [Adding a form](/getting-started/your-1st-application.md#setting-up-your-1st-form)                                                              |                      |
-| [Connector Factory](/getting-started/skryv-intro.md#connector-factory) | [Adding a workflow](/getting-started/your-1st-application.md#setting-up-your-1st-workflow)                                                      |                      |
-| [Reporting](/getting-started/skryv-intro.md#reporting)                 | [Preview your application](/getting-started/your-1st-application.md#preview-your-1st-application)                                                                                   |                      |
-| [VO-Kit](/getting-started/skryv-intro.md#vo-kit)                       | [Publish your application](/getting-started/your-1st-application.md#publish-your-1st-version)                                            |                      |
+| Skryv Platform Functionality                                           | Your 1st Application                                                                                       | Reference Documentation                               |
+|------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
+| [Front-office](/getting-started/skryv-intro.md#front-office)           | [Before you start](/getting-started/before-you-start.md)                                                   | [Configuration Artefacts](/config-reference/index.md) |
+| [Back-office](/getting-started/skryv-intro.md#back-office)             | [Initialising the Dossier Type](/getting-started/your-1st-application.md#setting-up-your-1st-dossier-type) | [Dossier Definitions](/config-reference/dosdefs.md)   |
+| [Process Automation](/getting-started/skryv-intro.md#automation)       | [Adding a form](/getting-started/your-1st-application.md#setting-up-your-1st-form)                         | [Workflows](/config-reference/workflows.md)           |
+| [Connector Factory](/getting-started/skryv-intro.md#connector-factory) | [Adding a workflow](/getting-started/your-1st-application.md#setting-up-your-1st-workflow)                 | [Forms](/config-reference/forms.md)                   |
+| [Reporting](/getting-started/skryv-intro.md#reporting)                 | [Preview your application](/getting-started/your-1st-application.md#preview-your-1st-application)          | [Templates](/config-reference/templates.md)           |
+| [VO-Kit](/getting-started/skryv-intro.md#vo-kit)                       | [Publish your application](/getting-started/your-1st-application.md#publish-your-1st-version)                |
+## Recent Updates to the documentation
 
-## Reference Documentation
-
-| Configuration                                         | Customisation | Technology  |
-|-------------------------------------------------------|---------------|-------------|
-| [Configuration Artefacts](/config-reference/index.md) | Coming Soon   | Coming Soon |
-| [Dossier Definitions](/config-reference/dosdefs.md)   |               |             |
-| [Workflows](/config-reference/workflows.md)           |               |             |
-| [Forms](/config-reference/forms.md)                   |               |             |
-| [Templates](/config-reference/templates.md)           |               |             |
-
+* Updated the [form field types](/config-reference/forms) documentation
+* Updated the [dossier definition](config-reference/dosdefs) reference documentation
+* More information about the [expressions used](config-reference/workflows?id=expression-language-el)
 
 
 ## In need of more help?

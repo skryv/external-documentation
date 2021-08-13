@@ -4,11 +4,11 @@ With the form modeler, you can configure forms that, when linked to a user task 
 Forms can be viewed in a webpage, but are also available to be downloaded with a default PDF visualisation.
 Additionally, an API (REST) and export (CSV) can be made available as well. Finally, this configuration will automatically propagate to the search index for easy search & reporting in a later stage.
 
-The form structure can be created by dragging & dropping the relevant fields into the structure.
+The form structure can be created by dragging & dropping the relevant fields (basic or advanced) structuring elements or lists into the form.
 
 ![image](../_media/studio-form.png)
 
-For each of the structural elements or fields, properties are available when you click on the individual field.
+For each of these elements, properties are available when you click on it.
 
 ![image](../_media/studio-form-field-details.png)
 
@@ -17,24 +17,8 @@ Behind the scences, this is translated into a json file that describes the infor
 !> This raw format is for power users only and no backward compatibility guarantees are given.
 
 ![image](../_media/studio-forms-raw.png)
-## Adding Structure to your Forms
 
-### Fieldset
-Fieldsets allow to group fields that logically belong together. 
-
-2 visualisation options are available, the default and the `box` visualisation
-
-![image](../_media/Field_Fieldset.png)
-
-![image](../_media/Field_Fieldset_Box.png)
-### Section
-A section allows splitting your form in multiple parts, giving easier navigation and overview.
-
-![image](../_media/Field_Section.gif)
-
-!> *important:* a section is never part of a field’s path within the expression
-
-## Field types
+## Basic Fields
 A collection of field types is currently supported, listed below.
 ### Attachment
 When you expect the user to upload an attachment.
@@ -84,11 +68,36 @@ Text fields can be assigned a mask. A mask will enforce a format (eg. enforcing 
 
 Currently supported masks are `ssin` (social security insurance number), `iban` (bank account), `BTW number` (VAT number) and `KBO number` (Company identification)
 
+## Adding Structure to your Forms
+
+### Fieldset
+Fieldsets allow to group fields that logically belong together. 
+
+2 visualisation options are available, the default and the `box` visualisation
+
+![image](../_media/Field_Fieldset.png)
+
+![image](../_media/Field_Fieldset_Box.png)
+### Section
+A section allows splitting your form in multiple parts, giving easier navigation and overview.
+
+![image](../_media/Field_Section.gif)
+
+!> *important:* a section is never part of a field’s path within the expression
+
 ## Adding Lists to your Forms
 
 If you want to repeat certain parts of the form, use lists.
 
 ![image](../_media/Field_List.gif)
+
+## Advanced Fields
+
+Advanced fields are predefined combinations of basic fields, structuring elements, lists and/or validations. Just like the other elements, simply drag and drop these elements in the form to use them. 
+
+!> You still want to update the key of these fields for clarity and future (eg. templates)
+
+![image](../_media/studio-form-advanced-fields.png)
 
 ## Reference Properties
 
