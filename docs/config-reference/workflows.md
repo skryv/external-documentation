@@ -123,7 +123,7 @@ This can be done in the workflow by chaining 2 service tasks:
    3. Assign the result of this service task to a Result Variable `attachmentId` 
 
 
-2. Add the file to the context of a form with the following expression `${LbAttachmentService.setContextAttachment(execution, 'yourContextFormKey', 'attachmentId')}`
+2. Add the file to the context of a form with the following expression `${lbAttachmentService.setContextAttachment(execution, 'yourContextFormKey', 'attachmentId')}`
    1. Replace `yourContextFormKey` with the key of the form that needs to have the context
    2. Make sure that the 3rd parameter (`attachmentId` matches with the result variable name from step 3 above)
 
