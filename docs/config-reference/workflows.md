@@ -88,15 +88,52 @@ A communication tasks allows the user to create a communication that will later 
 5. Choose wether the communication should be shown in read-only modus (eg. for printing)
 6. Choose a custom Submit Button Label to shown on the button that completes the task.
 
+### Form Tasks with Context
+
+When executing a task in the back-office, it is often relevant for the dossier manager to have specific context to execute the task. Form tasks with context allow to cater for this need, by displaying the relevant context on the left side of the screen, and the form on the right side of the screen. It is possible to show other forms or uploaded files as context. Context can be opened or closed.
+
+By default, the forms are shown as context (ordered alphabetically)
+
+#### Instructions for configuration
+
+1. Take an existing form
+2. Let the docdef you are using know where to find the context and content. You do this by adding computed expressions (under the logic tab of the form). 
+   1. key: `cc_context_manipulator`, expression `$$.propertyManipulators.document_context`
+   2. key: `cc_content_manipulator`, expression `$$`
+   3. key: `cc_content_component`, expression `'component'`
+
+!> Copy these expressions literally
+**This is sufficient to show the forms as context?**
+
+To show attachments, add the following 2 steps:
+
+3. Add a list to your form and name it `document_context`. Make sure it is hidden
+4. To show attachments, add a field attachment to this list (name: `context_file`)
+
+#### Adding Context Files automatically
+
+This can be done in the workflow by chaining 2 service tasks:
+
+1. Fetch the ID of the document to add with the following expression `${skryv.dossierFromScope(execution).getDocumentByDefinitionKey('yourFormKey').getField('yourAttachmentField').attachmentId}`
+   1. Replace `yourFormKey` with the key of the form where the attachment was uploaded by the user
+   2. Replace `yourAttachmentField` with the key of the attachment field in that form
+   3. Assign the result of this service task to a result Variable `attachmentId` **
+
+
+2. Add the file to the context of a form with the following expression `${lbConfig.setContextAttachment(execution, 'yourContextFormKey', 'attachmentId')}`
+   1. Replace `yourContextFormKey` with the key of the form that needs to have the context
+   2. Make sure that the 3rd parameter (`attachmentId` matches with the result variable name from step 3 above)
+
 ### Ad-hoc tasks
 
 CMMN support allows you to add ad-hoc tasks, also referred to as actions, that depend on the 
 For more information about the CMMN tasks, please contact [one of our consultants](mailto:support@skryv.com) to give you an introduction.
 
+
 ### Advanced task types
 
 Besides the task types described above, we also support the following advanced task types:
-- Form tasks with context: When executing a task in the back-office, it is often relevant for the dossier manager to have specific context to execute the task. Form tasks with context allow to cater for this need, by displaying the relevant context on the left side of the screen, and the form on the right side of the screen.
+
 - Form tasks with a list of sub-forms: This task type covers back-office tasks, which require the dossier manager to treat a list of items. This task type is especially useful in case the items in the list contain a lot of detail and each item requires a dedicated treatment from the dossier manager.
 - Bulk tasks: This feature allows to execute tasks in bulk, e.g. approve decisions in bulk or print communication in bulk.
 
