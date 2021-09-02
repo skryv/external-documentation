@@ -92,9 +92,11 @@ A communication tasks allows the user to create a communication that will later 
 
 When executing a task in the back-office, it is often relevant for the dossier manager to have specific context to execute the task. Form tasks with context allow to cater for this need, by displaying the relevant context on the left side of the screen, and the form on the right side of the screen. It is possible to show other forms or uploaded files as context. Context can be opened or closed.
 
-By default, the forms are shown as context (ordered alphabetically)
+By default, all the forms in the dossier are shown as context (ordered alphabetically) for tasks in the back-office. No extra configuration is necessary.
 
-#### Instructions for configuration
+Displaying uploaded attachments does require some configuration.
+
+#### Instructions for configuration (attachments as context)
 
 1. Take an existing form
 2. Let the docdef you are using know where to find the context and content. You do this by adding computed expressions (under the logic tab of the form). 
@@ -103,12 +105,13 @@ By default, the forms are shown as context (ordered alphabetically)
    3. key: `cc_content_component`, expression `'component'`
 
 !> Copy these expressions literally
-**This is sufficient to show the forms as context?**
 
 To show attachments, add the following 2 steps:
 
-3. Add a list to your form and name it `document_context`. Make sure it is hidden
+3. Add a list to your form and name it `document_context`. Make sure the list visualisation is set to "hidden"
 4. To show attachments, add a field attachment to this list (name: `context_file`)
+
+Attachments can now be added as context to this form.
 
 #### Adding Context Files automatically
 
@@ -117,10 +120,10 @@ This can be done in the workflow by chaining 2 service tasks:
 1. Fetch the ID of the document to add with the following expression `${skryv.dossierFromScope(execution).getDocumentByDefinitionKey('yourFormKey').getField('yourAttachmentField').attachmentId}`
    1. Replace `yourFormKey` with the key of the form where the attachment was uploaded by the user
    2. Replace `yourAttachmentField` with the key of the attachment field in that form
-   3. Assign the result of this service task to a result Variable `attachmentId` **
+   3. Assign the result of this service task to a Result Variable `attachmentId` 
 
 
-2. Add the file to the context of a form with the following expression `${lbConfig.setContextAttachment(execution, 'yourContextFormKey', 'attachmentId')}`
+2. Add the file to the context of a form with the following expression `${LbAttachmentService.setContextAttachment(execution, 'yourContextFormKey', 'attachmentId')}`
    1. Replace `yourContextFormKey` with the key of the form that needs to have the context
    2. Make sure that the 3rd parameter (`attachmentId` matches with the result variable name from step 3 above)
 
@@ -281,6 +284,12 @@ For more information on label providers, please refer to the article “[How to 
 `${skryv.dossierFromScope(execution).grantAccess().forTeamOfUser(userSub)}`
 
 `${skryv.dossierFromScope(execution).revokeAccess().forTeamOfUser(userSub)}`
+
+#### Generate a PDF from a template
+
+`${skryv.dossierFromScope(execution).createCommunicationByTemplateName(String templateName)}`
+
+Tip: use `${skryv.dossierFromScope(execution).createCommunicationByTemplateName(String templateName).getId()}` to retrieve the identifier of the generated PDF and add it as attachment to an e-mail.
 
 #### Other dossier operations
 
