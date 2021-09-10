@@ -108,8 +108,8 @@ Displaying uploaded attachments does require some configuration.
 
 To show attachments, add the following 2 steps:
 
-3. Add a list to your form and name it `document_context`. Make sure the list visualisation is set to "hidden"
-4. To show attachments, add a field attachment to this list (name: `context_file`)
+3. Add a list to your form with the key `document_context` (the name of the field doesn't matter). Make sure the list visualisation is set to "Hidden" and the initial length is set to 0.
+4. To show attachments, add a field attachment to this list with the key `context_file`(the name of the field doesn't matter).
 
 Attachments can now be added as context to this form.
 
