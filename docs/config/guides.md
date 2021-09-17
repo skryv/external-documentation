@@ -114,6 +114,16 @@ Feedback can then also be integrated in the configuration in the same iterative 
 
 ## Configuration best practices
 
+### Best practices for naming your configuration components
+
+!> We highly recommend you use a consistent convention to facilitate the configuration and maintainability of your process
+
+* Define a clear name for your process (ex: childcare subsidy) that you can use when setting the key of configuration components. If necessary, use abbreviations but make sure they are easily understandable for yourself and for other potential configurators (ex: premium for the renovation or embellisment of house facades = reno facade premium)
+* Set the key of your dossiertype to `myProcess` (example dossiertype key: childcareSubsidy)
+* Set the key of your main workflow to `myProcess` (example workflow key: childcareSubsidy) and the key of your subprocesses to `subprocessMyProcess` (example subprocess key: appealChildcareSubsidy)
+* To name forms, use a combination of the form's function and the name of your process: `formMyProcess` (examples of form keys: requestChildcareSubsidy, controlChildcareSubsidy, decisionChildcareSubsidy)
+* To name templates, use a combination de type of document with the function and the name of your process: `typeTemplateMyProcess` (example template names: emailConfirmationChildcareSubsidy, letterDecisionChildcareSubsidy)
+
 ### Best practices workflows
 
 * Give a clear name to your workflow and avoid any special characters
