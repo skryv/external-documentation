@@ -92,9 +92,13 @@ A communication tasks allows the user to create a communication that will later 
 
 When executing a task in the back-office, it is often relevant for the dossier manager to have specific context to execute the task. Form tasks with context allow to cater for this need, by displaying the relevant context on the left side of the screen, and the form on the right side of the screen. It is possible to show other forms or uploaded files as context. Context can be opened or closed.
 
-By default, forms in the dossier are shown as context (ordered alphabetically) for tasks in the back-office. No extra configuration is necessary.
+By default, all forms that are available in the dossier are also available as context (ordered alphabetically) for tasks in the back-office. This does not require any extra configuration.
 
 ![Image](../_media/studio-workflow-context.png)
+
+To set a specific form as context in form task, simply select the relevant form in the 'Context Default From' dropdown.
+
+![Image](../_media/context-default-form.png)
 
 In the user task configuration, it is possible to select the form that will be shown by default as the context.
 
