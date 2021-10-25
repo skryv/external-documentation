@@ -138,4 +138,4 @@ The following tutorial explains how to add a payment step to your workflow. This
 3. Enter the amount that needs to be paid. This can be a number `50`, `${12,3}` or a variable `${amountToBePaid}` or a calculation `${5*numberOfClubMembers}`
 4. The preview environments will be connected to the test services of the payment provider so no actual payments will happen. To test use accountnumber `4100000000000000000`, security code `123` and an expiration date that is in the future.
 
-<iframe width="784" height="490" src="https://drive.google.com/file/d/1bBjvbNuhqZCp0xGGnWUIutj7XyqBKlqp/preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="784" height="490" src="https://www.youtube.com/embed/l-LZQ7RwZE4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
