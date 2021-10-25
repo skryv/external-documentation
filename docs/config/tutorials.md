@@ -130,7 +130,8 @@ This tutorial shows how to send an automatic e-mail notification to the citizen 
 
 ## I want to add a payment step to my workflow
 
-The following tutorial explains how to add a payment step to your workflow. This can be used to request a payment from the requestor in the Front Office. 
+The following tutorial explains how to add a payment step to your workflow. This can be used to request a payment from the requestor in the Front Office.
+
 !>Note: A short onboarding needs to happen before you can use this feature in your environment. Please contact support@skryv.com to start the onboarding.
 
 1. At the desired place in your workflow add a call activity.
