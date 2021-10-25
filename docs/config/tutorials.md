@@ -127,3 +127,15 @@ This tutorial shows how to send an automatic e-mail notification to the citizen 
 4. In your workflow, add a service task with the Mail Task template and fill the parameters so that the e-mail is sent to the e-mail address the citizen gave in the request form (see [I want to use a value from a form in the BPMN process](##i-want-to-use-a-value-from-a-form-in-the-BPMN-process) and [Accessing a document](/config-reference/workflows.md###accessing-a-document) )
 
 <iframe width="784" height="490" src="https://www.youtube.com/embed/lrYgUrOGT2U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## I want to add a payment step to my workflow
+
+The following tutorial explains how to add a payment step to your workflow. This can be used to request a payment from the requestor in the Front Office. 
+!>Note: A short onboarding needs to happen before you can use this feature in your environment. Please contact support@skryv.com to start the onboarding.
+
+1. At the desired place in your workflow add a call activity.
+2. From the Element Templates select eGovFlowPayment
+3. Enter the amount that needs to be paid. This can be a number `50`, `${12,3}` or a variable `${amountToBePaid}` or a calculation `${5*numberOfClubMembers}`
+4. The preview environments will be connected to the test services of the payment provider so no actual payments will happen. To test use accountnumber `4100000000000000000`, security code `123` and an expiration date that is in the future.
+
+<iframe width="784" height="490" src="https://drive.google.com/file/d/1bBjvbNuhqZCp0xGGnWUIutj7XyqBKlqp/preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
