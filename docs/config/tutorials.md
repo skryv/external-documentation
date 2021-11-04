@@ -140,3 +140,25 @@ The following tutorial explains how to add a payment step to your workflow. This
 4. The preview environments will be connected to the test services of the payment provider so no actual payments will happen. To test use accountnumber `4100000000000000000`, security code `123` and an expiration date that is in the future.
 
 <iframe width="784" height="490" src="https://www.youtube.com/embed/l-LZQ7RwZE4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## I want to send status notifications via DOSIS
+
+The following tutorial explains how to add a DOSIS notification to your workflow.
+Briefly, a DOSIS connection allows you to send standard status updates of a dossier to a citizen's Mijn Burgerprofiel or a company's inbox in eLoket Ondernemers. Please see the [official website](https://overheid.vlaanderen.be/informatie-vlaanderen/producten-diensten/dossierstatusinformatiesysteem-dosis) for more detailed information.
+
+!>Note: A short onboarding needs to happen before you can use this feature in your environment. Please contact support@skryv.com to start the onboarding.
+
+1. Add a Service Task in your workflow at the place where a dossier changes status (e.g. after submission)
+2. Select "Connector - Dosis - Dossierstatusupdate" from the Element Template menu
+3. Enter the minimally required information to send via DOSIS
+   1. For the agent identification, we recommend you use a fictional National Registry Number or KBO-number to test the configuration (this can be filled in directly in the element template, or retrieved from a form using a fluent expression)
+   2. Important! Make sure you enter a valid product id, you will receive this information during your onboarding
+4. Test your workflow in the preview-environment and check the successful dispatch of the DOSIS notification on the relevant website
+   - Mijn Burgerprofiel if a notification was sent to a citizen
+     - Click on "Meld u aan"
+     - Go to the Tab "INSZ invullen" and fill in the INSZ with the National Registry Number you used for your test
+     - After you log in with this test user, you should see the status update that was just sent
+   - eLoket Ondernemers if a notification was sent to a company
+     - You should see a successful execution report if the status update happened correctly
+
+[Video tutorial coming soon]
