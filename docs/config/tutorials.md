@@ -161,4 +161,4 @@ Briefly, a DOSIS connection allows you to send standard status updates of a doss
    - [eLoket Ondernemers](https://beta.dosis.dev-vlaanderen.be/dossier/controlerapport) if a notification was sent to a company
      - You should see a successful execution report if the status update happened correctly
 
-[Video tutorial coming soon]
+<iframe width="784" height="490" src="https://www.youtube.com/embed/L-2dwow48oA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
