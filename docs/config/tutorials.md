@@ -154,11 +154,11 @@ Briefly, a DOSIS connection allows you to send standard status updates of a doss
    1. For the agent identification, we recommend you use a fictional National Registry Number or KBO-number to test the configuration (this can be filled in directly in the element template, or retrieved from a form using a fluent expression)
    2. Important! Make sure you enter a valid product id, you will receive this information during your onboarding
 4. Test your workflow in the preview-environment and check the successful dispatch of the DOSIS notification on the relevant website
-   - Mijn Burgerprofiel if a notification was sent to a citizen
+   - [Mijn Burgerprofiel](https://beta.frontend.burgerprofiel.dev-vlaanderen.be/) if a notification was sent to a citizen
      - Click on "Meld u aan"
      - Go to the Tab "INSZ invullen" and fill in the INSZ with the National Registry Number you used for your test
      - After you log in with this test user, you should see the status update that was just sent
-   - eLoket Ondernemers if a notification was sent to a company
+   - [eLoket Ondernemers](https://beta.dosis.dev-vlaanderen.be/dossier/controlerapport) if a notification was sent to a company
      - You should see a successful execution report if the status update happened correctly
 
 [Video tutorial coming soon]
