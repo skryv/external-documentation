@@ -162,3 +162,59 @@ Briefly, a DOSIS connection allows you to send standard status updates of a doss
      - You should see a successful execution report if the status update happened correctly
 
 <iframe width="784" height="490" src="https://www.youtube.com/embed/L-2dwow48oA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## I want to register events in GIPOD
+
+Onderstaande tutorial legt uit hoe er geïntegreerd kan worden met GIPOD om evenementen te registeren.
+
+!>Note: Er moet een onboarding doorlopen worden vooralleer deze feature bruikbaar is op uw applicatie. Contacteer support@skryv.com om de onboarding op te starten.
+
+### Gegevens
+Volgende informatie is nodig om de GIPOD connector te kunnen aanroepen:
+-	Ingetekend evenment gebied: voeg hiervoor de kaart component toe aan uw formulier (verderop meer over de configuratie van de kaart component)
+-	Startdatum evenement (Moet in de toekomst liggen minstens één dag later)
+-	Einddatum evenement (Mag niet voor de startdatum liggen)
+-	E-mail organisator evenement
+-	Naam evenement
+
+### GIPOD connecties
+#### Controleer conflicten (Gipod – public occupancies):
+Deze connectie wordt gebruikt om te controleren of er voor de aangevraagd periode op de aangevraagde plaats geen conflicten zijn. Indien er conflicten zijn worden deze autoimatisch bij op de kaart ingetekend na het oproepen van deze connectie.
+##### Configuratie
+- Form key: Hier plaatst u de key van het formulier waar de gegevens van het evenement uit opgehaald kunnen worden (typisch is dit het aanvraag formulier)
+- Map field path: het pad naar het kaart componentje in het formulier
+- Start date path: het pad naar de startdatum van het evenement in het formulier
+- End date path: het pad naar de einddatum van het evenment in het formulier.
+- Result variable: De connectie geeft ook een boolean waarde (true/false) terug na het oproepen, deze geeft aan of er conflicten zijn (true) of niet (false). Deze variabele kan door de configurator gebruikt worden om een speciaal pad in de workflow te starten. Bv. De aanvraag wordt automatisch afgewezen of moet terug naar de aanvrager om aanpassingen te doen.
+
+![Image](../_media/gipod-check-for-conflicts.png)
+
+#### Registreer evenement (Gipod – register event):
+Dit is de eerste connectie gebruikt moet worden om een nieuw evenement in GIPOD te registreren. Deze connectie maakt een nieuw evenement aan in GIPOD met de voorlopige status ” Niet-concreet gepland”. Dit zorgt er voor dat een evenment alvast geregistreerd is zodat er tijdens het behandelen van de aanvraag geen nieuwe conflicten ontstaan.
+##### Configuratie
+- Form key: Hier plaatst u de key van het formulier waar de gegevens van het evenement uit opgehaald kunnen worden (typisch is dit het aanvraag formulier)
+- Map field path: het pad naar het kaart componentje in het formulier
+- Email path: het pad naar het email adres van de organisator in het formulier
+- Description path: het pad naar de naam/beschrijving van het evenement in het formulier
+- Start date path: het pad naar de startdatum van het evenement in het formulier
+- End date path: het pad naar de einddatum van het evenment in het formulier.
+- Result variable: Deze connectie geeft als resultaat de id van het evenement in GIPOD. Het is belangrijk deze bij te houden in een variabele aangezien deze voor de volgende connecties nodig is.
+
+![Image](../_media/gipod-register-event.png)
+
+#### Bevestig evenement (Gipod – Confirm event):
+Deze connectie bevestigd het evenement in GIPOD, de status wijzigt dan van “Niet-concreet gepland” naar “Concreet gepland”. Deze connectie gebeurd typisch eens de aanvraag volledig is goedgekeurd. Opgelet: Voordat deze connectie opgeroepen kan worden moet Registreer evenement reeds gebeurd zijn.
+##### Configuratie
+- Event id: geef hier de naam van de variabele met de event id in. Deze komt als resultaat uit de “Registreer evenement” connectie.
+
+![Image](../_media/gipod-confirm-event.png)
+
+#### Verwijder evenement (Gipod – Delete event):
+Deze connectie verwijderd het evenement uit GIPOD. Deze connectie gebeurd typisch indien de aanvraag werd afgekeurd of als er wijzigingen aan het evenement nodig zijn, in dat geval wordt het evenement eerst verwijderd om dan een nieuw evenement te registreren. Opgelet: Voordat deze connectie opgeroepen kan worden moet Registreer evenement reeds gebeurd zijn.
+##### Configuratie
+- Event id: geef hier de naam van de variabele met de event id in. Deze komt als resultaat uit de “Registreer evenement” connectie.
+
+![Image](../_media/gipod-delete-event.png)
+
+### Voorbeeld workflow
+![Image](../_media/gipod-example-flow.png)
