@@ -21,7 +21,7 @@ Below you’ll find examples of functions we often use in a handlebars template.
 
 | **Function**              | **Explanation**                                                                                  | **Example**                                                                                                                             |
 |---------------------------|--------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| Dossier label             | Show the assigned dossier label                                                                  | `{{dossier._source.dossier.label}}`                                                                                                     |
+| Dossier label             | Show the assigned dossier label                                                                  | `{{dossier.label}}`                                                                                                     |
 | Show the value of a field | Show .hbs the way to the docdef and the field you want to show                                   | `{{docs.name_of_docdef.path_of_field}}`                                                                                                 |
 | If .. else                | Check if a variable is defined and fill content depending on whether the result is true or false | `{{#if docs.name_of_docdef.path_of_field}} {{docs.name_of_docdef.path_of_field}}{{else}} {{docs.name_of_docdef.path_of_field2}}{{/if}}` |
 | ifCond                    | Compare the value of a variable retrieved via hbs and fill content if comparison returns true    | `{{#ifCond VAR operator=”=” expected=“VALUE“}} {{/ifCond}}`                                                                             |
@@ -33,7 +33,7 @@ Below you’ll find examples of functions we often use in a handlebars template.
 | index                    | Show the index of a list item                                                                 | `{{index @index}}`                                                 |
 | latestTask                | Compare the name of the latest task(s) in the process with target task(s) name                   | `{{#latestTask dossier.task names="Some Task, Another Task"}} {{else}} {{/latestTask}}`                                                 |
 | latestMilestone           | Compare the name of the latest milestone in the process with target milestone name               | `{{#latestMilestone dossier.milestones keys="milestone_1, milestone_2"}} {{/latestMilestone}}`                                          |
-| dossierUrl                | Fill in hyperlink URL for FO or BO dossierpages                                                  | `{{dossierUrl dossier._source.dossier.id type=""}}`<br><br>`{{dossierUrl dossier._source.dossier.id type="front"}}`                     |
+| dossierUrl                | Fill in hyperlink URL for FO or BO dossierpages                                                  | `{{dossierUrl dossier.id type=""}}`<br><br>`{{dossierUrl dossier.id type="front"}}`                     |
 
 Other tips concerning Skryv PDFS/communications:
 
