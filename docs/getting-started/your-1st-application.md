@@ -2,7 +2,7 @@
 
 ## Setting up your 1st dossier type
 
-To create a new dossier type, simply click the + button on the application page in Skryv Studio.
+To create a new dossier type, simply click the `+` button on the application page in Skryv Studio.
 
 ![Image](../_media/studio-new-dossier-type.png)
 
@@ -18,7 +18,7 @@ To add a form to your configuration, select `Forms` in the menu left and click t
 
 ![Image](../_media/studio-form-new.png)
 
-Give you form an identifier (key) and name.
+Give your form an identifier (key) and name.
 
 This will bring you to the form modeler, which supports an extensive range of content types, validations and other behaviour.
 
@@ -26,7 +26,7 @@ Simply drag the fields and structural elements into the working zone, the blue a
 
 ![Image](../_media/studio-form-complete.png)
 
-To add more detailed information, click on one of the items to take you to the details.
+To add more detailed information, click on one of the items to take you to the properties.
 
 ?> For each of these fields, define at least the key
 
@@ -45,7 +45,7 @@ This will bring you to the workflow modeler, which supports an extensive set of 
 ![Image](../_media/studio-workflow-bpmn.png)
 
 As you start and as you continue, you will get indications of wether the BPMN is valid or not. Use the items on the left to create your workflow, for example the one shown below.
-Use the wrench item to select the properties of the BPMN element. For a task that you want to link to a form, the task type needs to be `User Task`.
+Use the wrench item to select the properties of the BPMN element. For a task that you want to link to a `Form`, the task type needs to be `User Task`.
 
 ![Image](../_media/studio-workflow-bpmn-created.png)
 
@@ -56,8 +56,6 @@ Once you created this `User Task`, you can select an element template (right of 
 With this done (and the save button clicked), you have a workflow with a task that is linked to the form!
 
 ## Preview your 1st application
-
-
 
 ## Publish your 1st version
 
