@@ -243,7 +243,7 @@ An example is the calculation of a subsidy based on the selected type of subsidy
 | To check if the postcode of the address is in Flanders | `"typeof $ === 'string' ? (1500 <= Number($) && Number($) <= 3999) \| (8000 <= Number($) && Number($) <= 9999) : true"`                                                                                                 |
 | To check the IBAN number                               | `“typeof $ === 'string' && $.length > 0? ($.substring(0,2) === 'BE' ? ((($.substring(4,16) + '1114') % 97 + $.substring(2,4)) % 97 === 1) : ((($.substring(2,14) + '1114') % 97 + $.substring(0,2)) % 97 === 1)):true”` |
 | To check the KBO                                       | `"typeof $ === 'string' && $.length > 0 ? (97 - $.substring(0,8) % 97) === Number($.substring(8)) : true”`                                                                                                              |
-| To check the validity of a national registry number    | `"typeof $ === 'string' && $.length > 0 ? 97 - $.substring(0,9) % 97 === Number($.substring(9)):true"`                                                                                                                  |
+| To check the validity of a national registry number    | `"typeof $=== 'string' && $.length > 0 ? (97 - ($.substring(0,9) % 97) - $.substring(9,11) === 0) || (97 - ((2 + $.substring(0,9)) % 97) - $.substring(9,11) === 0) : true"`                                                                                                                  |
 
 ### Examples of computed expressions to add logic:
 
