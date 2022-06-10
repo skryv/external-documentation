@@ -282,8 +282,6 @@ The dossier label can also be recalculated from the Camunda process, based on a 
 
 ?> It is a best practice to set the Camunda variable `dossierLabel` again whenever the dossier label is recalculated.
 
-For more information on label providers, please refer to the article “[How to set up a label provider?](https://skryvdev.atlassian.net/wiki/spaces/SP/pages/1560543242)”.
-
 #### Dossier export
 
 `${skryv.dossierFromScope(execution).exportDossierWithAttachments(folderName)}`
