@@ -178,7 +178,7 @@ Volgende informatie is nodig om de GIPOD connector te kunnen aanroepen:
 
 #### Controleer conflicten (Gipod – public occupancies):
 
-Deze connectie wordt gebruikt om te controleren of er voor de aangevraagd periode op de aangevraagde plaats geen conflicten zijn. Indien er conflicten zijn worden deze autoimatisch bij op de kaart ingetekend na het oproepen van deze connectie.
+Deze connectie wordt gebruikt om te controleren of er voor de aangevraagd periode op de aangevraagde plaats geen conflicten zijn. Indien er conflicten zijn worden deze automatisch bij op de kaart ingetekend na het oproepen van deze connectie.
 
 ##### Configuratie
 
