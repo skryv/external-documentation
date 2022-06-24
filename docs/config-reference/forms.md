@@ -277,7 +277,7 @@ An address fieldset can use the custom behaviour of the custom component `skrAdd
 
 Example:
 
-```
+```json
 {
   "type": "fieldset",
   "label": "Address",
