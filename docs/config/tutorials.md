@@ -57,6 +57,137 @@ For more information on how fluent expressions can be used to manipulate data fr
 
 <iframe width="784" height="490" src="https://www.youtube.com/embed/-Vumx4Eer2E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## I want to show or hide list elements using a computed expression
+
+Using the a computed expression to show or hide elements in a form is fairly straigforward using the `Studio`. Applying this filters on the elements of a list is not supported by`Studio`, yet this can be achieved by editing the raw `json` of the form.
+
+##### Example
+
+Lets say we have a list of vehicles. Every list element has the type of the vehicle and a checkbox wether a drivers license is required or not.
+
+<table>
+<tr>
+<td>
+
+![image](../_media/Field_List_computed_show.png)
+
+</td>
+<td>
+
+```json                                       
+{                                             
+  "label": "Vehicle request",                 
+  "name": "vehicle-request",                  
+  "fields": [                                 
+    {                                         
+      "name": "vehicleList",                  
+      "label": "vehicleList",                 
+      "type": "list",                         
+      "fields": [                             
+        {                                     
+          "name": "verhicleType",             
+          "label": "verhicleType",            
+          "type": "text"                      
+        },                                    
+        {                                     
+          "name": "driversLicenseRequired",   
+          "label": "driversLicenseRequired",  
+          "type": "boolean"                   
+        }                                     
+      ]                                       
+    }                                         
+  ]                                           
+}                                             
+```                                           
+
+</td>
+</tr>
+</table>
+
+Now we want to add a checkbox to the form to hide or show the vehicles with a drivers license requirement. There are 2 things we need to do:
+
+1. Add a checkbox
+
+```json
+}
+  "fields": [
+      {
+        "name": "driversLicenseOnly",
+        "label": "driversLicenseOnly",
+        "type": "boolean"
+      }
+}
+```
+
+2. Add a computed expression and apply it to the `computedShow` of the list.
+
+The  following expression will check if the checkbox in the list item, has the same value as the checkbox added in step 1.
+
+```json
+{
+  "element": {
+    "computedShow": "checkDriversLicenseRequired",
+    "computedExpressions": {
+      "checkDriversLicenseRequired": "$.driversLicenseRequired === undefined || $$.parent.parent.propertyManipulators.driversLicenseOnly.value === $.driversLicenseRequired"
+    }
+  }
+}
+```
+
+Putting it al toghether gives the following result.
+
+<table>
+<tr>
+<td>
+
+![image](../_media/Field_List_computed_show.gif)
+
+</td>
+<td>
+
+```json                                       
+{                                             
+  "label": "Vehicle request",                 
+  "name": "vehicle-request",                  
+  "fields": [  
+    {
+        "name": "driversLicenseOnly",
+        "label": "driversLicenseOnly",
+        "type": "boolean"
+    },                               
+    {                                         
+      "name": "vehicleList",                  
+      "label": "vehicleList",                 
+      "type": "list", 
+      "element": {
+        "computedShow": "checkDriversLicenseRequired",
+        "computedExpressions": {
+          "checkDriversLicenseRequired": "see above"
+        }
+      },                        
+      "fields": [                             
+        {                                     
+          "name": "verhicleType",             
+          "label": "verhicleType",            
+          "type": "text"                      
+        },                                    
+        {                                     
+          "name": "driversLicenseRequired",   
+          "label": "driversLicenseRequired",  
+          "type": "boolean"                   
+        }                                     
+      ]                                       
+    }                                         
+  ]                                           
+}                                             
+```                                           
+
+</td>
+</tr>
+</table>
+
+
+
 ## I want to follow my dossier status
 
 #### I want to add a milestone
